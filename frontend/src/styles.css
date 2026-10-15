@@ -1,0 +1,51 @@
+:root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+body { margin: 0; background: Canvas; color: CanvasText; }
+main { max-width: 1000px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 24px; }
+.card { border: 1px solid color-mix(in srgb, currentColor 25%, transparent); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+.card h2 { margin-top: 0; font-size: 18px; }
+label { display: block; margin: 12px 0; font-weight: 600; }
+select, input[type=file] { display: block; margin-top: 6px; font: inherit; }
+button[type=submit] { font: inherit; padding: 8px 18px; border-radius: 8px; cursor: pointer; }
+button[disabled] { cursor: not-allowed; opacity: 0.6; }
+.muted { opacity: 0.65; font-weight: 400; }
+.error { color: #b3261e; font-weight: 600; }
+.steps { list-style: none; padding: 0; }
+.step { padding: 6px 0; }
+.step .icon { display: inline-block; width: 1.5em; }
+.step.running { font-weight: 700; }
+.step.done .icon { color: #1b7f4b; }
+.step.failed .icon { color: #b3261e; }
+.viewer { display: grid; grid-template-columns: 240px 1fr; gap: 12px; }
+.modules { list-style: none; margin: 0; padding: 0; max-height: 480px; overflow: auto; }
+.modules button { width: 100%; text-align: left; font: inherit; padding: 8px; border: 1px solid transparent; border-radius: 6px; background: none; cursor: pointer; color: inherit; }
+.modules button.active { border-color: currentColor; }
+.code { margin: 0; padding: 12px; max-height: 480px; overflow: auto; border-radius: 8px; background: color-mix(in srgb, currentColor 8%, transparent); font-size: 13px; line-height: 1.45; }
+@media (max-width: 700px) { .viewer { grid-template-columns: 1fr; } }
+.small { font-size: 12px; }
+label.inline { display: inline-block; margin: 8px 0; }
+.modules-summary { padding-left: 18px; }
+.table-wrap { overflow-x: auto; }
+table.procs { border-collapse: collapse; width: 100%; font-size: 14px; }
+table.procs th, table.procs td { text-align: left; padding: 6px 8px; border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent); vertical-align: top; }
+table.procs tr.clickable { cursor: pointer; }
+table.procs tr.detail td { background: color-mix(in srgb, currentColor 6%, transparent); }
+table.procs dl { margin: 0; display: grid; grid-template-columns: 110px 1fr; gap: 4px 12px; }
+table.procs dt { font-weight: 600; }
+table.procs dd { margin: 0; }
+button.link { font: inherit; background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; font-weight: 600; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; border: 1px solid currentColor; }
+.pill.supported { color: #1b7f4b; }
+.pill.partial { color: #9a6700; }
+.pill.unsupported { color: #b3261e; }
+.flags { padding-left: 18px; }
+.flags li { margin: 8px 0; }
+pre.snippet { margin: 4px 0 0; padding: 6px 8px; border-radius: 6px; background: color-mix(in srgb, currentColor 8%, transparent); font-size: 12px; overflow-x: auto; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.tab { font: inherit; padding: 6px 12px; border-radius: 8px; border: 1px solid color-mix(in srgb, currentColor 25%, transparent); background: none; color: inherit; cursor: pointer; }
+.tab.active { border-color: currentColor; font-weight: 700; }
+.spec-item { border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent); padding: 8px 0 12px; }
+.spec-item h3 { font-size: 16px; margin: 8px 0 4px; }
+
+a.button { display: inline-block; padding: 8px 14px; border-radius: 6px; background: #2457c5; color: #fff; text-decoration: none; font-weight: 600; }
+a.button:hover { background: #1b469e; }
